@@ -1709,6 +1709,7 @@ dependencies = [
  "ic-cdk",
  "pocket-ic",
  "serde",
+ "serde_bytes",
 ]
 
 [[package]]

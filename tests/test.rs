@@ -12,7 +12,8 @@ pub struct CanisterHttpRequestArgument {
     pub max_response_bytes: Option<u64>,
     pub method: String,
     pub headers: Vec<(String, String)>,
-    pub body: Option<Vec<u8>>,
+    #[serde(with = "serde_bytes")]
+    pub body: Vec<u8>,
     pub transform: Option<(String, String)>,
 }
 
@@ -30,7 +31,7 @@ fn test() {
         max_response_bytes: Some(17),
         method: "POST".to_string(),
         headers: vec![],
-        body: Some(vec![42; 1_900_000]),
+        body: vec![42; 1_900_000],
         transform: Some(("ok".to_string(), "nok".to_string())),
     };
     let arg_bytes = Encode!(&arg).unwrap();

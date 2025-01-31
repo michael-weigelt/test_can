@@ -6,6 +6,7 @@ edition = "2021"
 [dependencies]
 candid = "*"
 serde = "*"
+serde_bytes = "*"
 ic-cdk = "0.17.1"
 
 [dev-dependencies]
