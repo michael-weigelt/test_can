@@ -1,0 +1,12 @@
+[package]
+name = "test_can"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+candid = "*"
+serde = "*"
+ic-cdk = "0.17.1"
+
+[dev-dependencies]
+pocket-ic = "6.0.0"
